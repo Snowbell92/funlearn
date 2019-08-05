@@ -12,8 +12,8 @@ from UserDevelopment import UserDevelopment
 from new_qus import Ui_MainWindow
 from additem import Ui_Form
 from backend_qus import Ui_FormQ
-from ExpressionDetection import VideoWindow, EmotionPredictor, GazeEstimator
-from EyeGaze import VideoWindowEye, EmotionPredictor, GazeEstimator
+# from ExpressionDetection import VideoWindow, EmotionPredictor, GazeEstimator
+# from EyeGaze import VideoWindowEye, EmotionPredictor, GazeEstimator
 
 class StartingPage(QWidget):
     def __init__(self, parent=None):
@@ -57,15 +57,15 @@ class StartingPage(QWidget):
         self.btn2.clicked.connect(self.btn_2_clicked)
 
 
-        self.btn3 = QPushButton("EXPRESSIVE  CONTENTS", self)
-        self.btn3.setGeometry(4.5*horUnit, 7*verUnit, 6.5*horUnit, 1*verUnit)
-        self.btn3.setStyleSheet("background-color: white; font-weight: bold; font-size: 25px; color: green;")
-        self.btn3.clicked.connect(self.btn_3_clicked)
+        #self.btn3 = QPushButton("EXPRESSIVE  CONTENTS", self)
+        #self.btn3.setGeometry(4.5*horUnit, 7*verUnit, 6.5*horUnit, 1*verUnit)
+        #self.btn3.setStyleSheet("background-color: white; font-weight: bold; font-size: 25px; color: green;")
+        #self.btn3.clicked.connect(self.btn_3_clicked)
         
-        self.btnE = QPushButton("EYE-GAZE  CONTENTS", self)
-        self.btnE.setGeometry(4.5*horUnit, 9*verUnit, 6.5*horUnit, 1*verUnit)
-        self.btnE.setStyleSheet("background-color: white; font-weight: bold; font-size: 25px; color: green;")
-        self.btnE.clicked.connect(self.btn_E_clicked)
+        #self.btnE = QPushButton("EYE-GAZE  CONTENTS", self)
+        #self.btnE.setGeometry(4.5*horUnit, 9*verUnit, 6.5*horUnit, 1*verUnit)
+        #self.btnE.setStyleSheet("background-color: white; font-weight: bold; font-size: 25px; color: green;")
+        #self.btnE.clicked.connect(self.btn_E_clicked)
         
 
         self.label2 = QLabel(self)
@@ -116,14 +116,14 @@ class StartingPage(QWidget):
         #self.game.initGame(1)
        
 
-    def btn_3_clicked(self):					# Expressive Content
-        self.exp = VideoWindow()
-        self.exp.show()
+    #def btn_3_clicked(self):					# Expressive Content
+        #self.exp = VideoWindow()
+        #self.exp.show()
 
     
-    def btn_E_clicked(self):                    # Eyegaze Content
-        self.eye = VideoWindowEye()
-        self.eye.show()
+    #def btn_E_clicked(self):                    # Eyegaze Content
+        #self.eye = VideoWindowEye()
+       # self.eye.show()
     
 
     def btn_4_clicked(self):

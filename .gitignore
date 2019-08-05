@@ -250,3 +250,11 @@ fabric.properties
 A Learning Tool for Autistic Children.pdf
 Output/*
 SPL 2 EYE GAZE DETECTION/*
+*.dat
+*.pdf
+*.pptx
+*.zip
+EyeGazeOutput/*
+*.mp4
+*.hdf5
+ExpressionOutput/*

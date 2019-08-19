@@ -3,4 +3,4 @@ mysqluser: root
 mysqlpassword: local
 mysqldatabase: myapp
 
-imagespath : '/assets/'
+imagespath : 'assets/'

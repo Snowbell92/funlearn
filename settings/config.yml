@@ -1,0 +1,6 @@
+mysqlhost: localhost
+mysqluser: root
+mysqlpassword: local
+mysqldatabase: myapp
+
+imagespath : '/assets/'

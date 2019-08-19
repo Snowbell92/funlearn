@@ -112,24 +112,24 @@ class Ui_Form(object):
         
 
     def setImage1(self):
-        ifileName, _ = QtWidgets.QFileDialog.getOpenFileName(None, "Select Image", "/home/anika/Downloads/images/gamepic", "Image Files (*.png *.jpg *.jpeg *.bmp)")
+        ifileName, _ = QtWidgets.QFileDialog.getOpenFileName(None, "Select Image", "/home/anika/Downloads/assets/gamepic", "Image Files (*.png *.jpg *.jpeg *.bmp)")
         print(ifileName)
         self.addName.setText(ifileName)
     def setImage2(self):
-        ifileName, _ = QtWidgets.QFileDialog.getOpenFileName(None, "Select Image", "/home/anika/Downloads/images/gamepic", "Image Files (*.png *.jpg *.jpeg *.bmp)")
+        ifileName, _ = QtWidgets.QFileDialog.getOpenFileName(None, "Select Image", "/home/anika/Downloads/assets/gamepic", "Image Files (*.png *.jpg *.jpeg *.bmp)")
         print(ifileName)
         self.imglineEdit.setText(ifileName)
     def setImage3(self):
-        ifileName, _ = QtWidgets.QFileDialog.getOpenFileName(None, "Select Image", "/home/anika/Downloads/images/gamepic", "Image Files (*.png *.jpg *.jpeg *.bmp)")
+        ifileName, _ = QtWidgets.QFileDialog.getOpenFileName(None, "Select Image", "/home/anika/Downloads/assets/gamepic", "Image Files (*.png *.jpg *.jpeg *.bmp)")
         print(ifileName)
         self.imglineEdit2.setText(ifileName)
     def setImage4(self):
-        ifileName, _ = QtWidgets.QFileDialog.getOpenFileName(None, "Select Image", "/home/anika/Downloads/images/gamepic", "Image Files (*.png *.jpg *.jpeg *.bmp)")
+        ifileName, _ = QtWidgets.QFileDialog.getOpenFileName(None, "Select Image", "/home/anika/Downloads/assets/gamepic", "Image Files (*.png *.jpg *.jpeg *.bmp)")
         print(ifileName)
         self.imglineEdit3.setText(ifileName)
 
     def setImage5(self):
-        ifileName, _ = QtWidgets.QFileDialog.getOpenFileName(None, "Select Image", "/home/anika/Downloads/images/gamepic", "Image Files (*.png *.jpg *.jpeg *.bmp)")
+        ifileName, _ = QtWidgets.QFileDialog.getOpenFileName(None, "Select Image", "/home/anika/Downloads/assets/gamepic", "Image Files (*.png *.jpg *.jpeg *.bmp)")
         print(ifileName)
         self.vidlineEdit.setText(ifileName)
 

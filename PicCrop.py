@@ -14,7 +14,7 @@ def crop(im, height, width):
 
 
 if __name__ == '__main__':
-    path1=path="/home/anika/Documents/spl/images/gamepic/switch_1"
+    path1=path="/home/anika/Documents/spl/assets/gamepic/switch_1"
     path1+=".png"
     print(path1)								
     im = Image.open(path1)						

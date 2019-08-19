@@ -1,6 +1,6 @@
 '''
 ### THINGS TO DO ###
-If NEXT button pressed & 'this' obj images run out:
+If NEXT button pressed & 'this' obj assets run out:
 	If 'this' obj already learned (i.e. question answered)
 		it will load the next obj image
 	Otherwise,

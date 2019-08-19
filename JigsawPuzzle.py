@@ -102,13 +102,13 @@ class JigsawPuzzle():
 		display.blit(image, (5.8*deviceDisplay.current_w/8, ver_gap))   
 		display.blit(ver_divider, (5.2*deviceDisplay.current_w/8, ver_gap)) 
 
-		# positions of 4 piece images 
+		# positions of 4 piece assets
 		display.blit(image1, (3*hor_gap, ver_gap))
 		display.blit(image2, (4*hor_gap + TILE_WIDTH, ver_gap))
 		display.blit(image3, (5*hor_gap + 2*TILE_WIDTH, ver_gap))
 		display.blit(image4, (6*hor_gap + 3*TILE_WIDTH, ver_gap))
 
-		# position of blank tiles to hold 4 pieces of images
+		# position of blank tiles to hold 4 pieces of assets
 		display.blit(silver_rect, (4*hor_gap + TILE_WIDTH, 2*height + ver_gap))
 		display.blit(gray_rect, (4*hor_gap + 2*TILE_WIDTH + 1, 2*height + ver_gap))
 		display.blit(gray_rect, (4*hor_gap + TILE_WIDTH, 2*height + ver_gap + TILE_HEIGHT+1))

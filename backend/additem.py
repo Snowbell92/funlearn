@@ -25,7 +25,7 @@ class Ui_Form(object):
 
         self.label= QtWidgets.QLabel(Form)
         self.label.setGeometry(QtCore.QRect(600, 30, 700, 50))
-        self.label.setText("Add images, audios and videos to add object")
+        self.label.setText("Add assets, audios and videos to add object")
         self.label.setFont(QtGui.QFont("Times", 20, QtGui.QFont.Black))
 
         
@@ -139,19 +139,19 @@ class Ui_Form(object):
         self.objpushButton.setText(_translate("Form", "Add Object"))
 
     def setImage1(self):
-        ifileName, _ = QtWidgets.QFileDialog.getOpenFileName(None, "Select Image", "/home/anika/Downloads/images", "Image Files (*.png *.jpg *.jpeg *.bmp)")
+        ifileName, _ = QtWidgets.QFileDialog.getOpenFileName(None, "Select Image", "/home/anika/Downloads/assets", "Image Files (*.png *.jpg *.jpeg *.bmp)")
         print(ifileName)
         self.addName.setText(ifileName)
     def setImage2(self):
-        ifileName, _ = QtWidgets.QFileDialog.getOpenFileName(None, "Select Image", "/home/anika/Downloads/images", "Image Files (*.png *.jpg *.jpeg *.bmp)")
+        ifileName, _ = QtWidgets.QFileDialog.getOpenFileName(None, "Select Image", "/home/anika/Downloads/assets", "Image Files (*.png *.jpg *.jpeg *.bmp)")
         print(ifileName)
         self.imglineEdit.setText(ifileName)
     def setImage3(self):
-        ifileName, _ = QtWidgets.QFileDialog.getOpenFileName(None, "Select Image", "/home/anika/Downloads/images", "Image Files (*.png *.jpg *.jpeg *.bmp)")
+        ifileName, _ = QtWidgets.QFileDialog.getOpenFileName(None, "Select Image", "/home/anika/Downloads/assets", "Image Files (*.png *.jpg *.jpeg *.bmp)")
         print(ifileName)
         self.imglineEdit2.setText(ifileName)
     def setImage4(self):
-        ifileName, _ = QtWidgets.QFileDialog.getOpenFileName(None, "Select Image", "/home/anika/Downloads/images", "Image Files (*.png *.jpg *.jpeg *.bmp)")
+        ifileName, _ = QtWidgets.QFileDialog.getOpenFileName(None, "Select Image", "/home/anika/Downloads/assets", "Image Files (*.png *.jpg *.jpeg *.bmp)")
         print(ifileName)
         self.imglineEdit3.setText(ifileName)
 

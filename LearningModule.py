@@ -1,4 +1,7 @@
 import sys
+
+import yaml
+from PIL import Image
 from PyQt5.QtCore import QDir, Qt, QUrl
 from PyQt5 import QtGui, QtCore, QtWidgets, QtMultimedia, QtMultimediaWidgets
 from PyQt5.QtMultimedia import QMediaContent, QMediaPlayer
@@ -29,6 +32,14 @@ class App(QWidget):
     img = list()
     alreadyLearned = list()
 
+    def load_config(self, config_file):
+        with open(config_file, 'r') as stream:
+            try:
+                return yaml.safe_load(stream)
+            except yaml.YAMLError as exc:
+                print('here')
+                print(exc)
+
     def __init__(self):
         super().__init__()
 
@@ -40,8 +51,6 @@ class App(QWidget):
         print(self.width, self.height)
 
         self.title = 'WELCOME TO AUDIO-VISUAL LEARNING'
-
-
         self.initUI()
 
     def initUI(self):
@@ -50,6 +59,10 @@ class App(QWidget):
 
         self.setWindowTitle(self.title)
         self.setGeometry(self.left, self.top, self.width, self.height)
+        config = self.load_config('config.yml')
+        path = config.get('imagespath')
+        print(App.objNameImg)
+        print(path+str(App.ObjectID))
 
         # INITIAL DATABASE 
         mydb = mysql.connector.connect(

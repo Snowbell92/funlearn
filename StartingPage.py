@@ -2,15 +2,14 @@ import sys
 from PyQt5.QtCore import *
 from PyQt5.QtGui import *
 from PyQt5 import QtCore, QtWidgets
-from PyQt5.QtWidgets import QApplication, QWidget, QVBoxLayout, QMainWindow, QPushButton, QLabel
-from PyQt5.QtGui import QPainter, QColor, QFont, QPen
+from PyQt5.QtWidgets import QApplication, QWidget, QPushButton, QLabel
+from PyQt5.QtGui import QPainter, QPen
 import tkinter as tk
 
 from LearningModule import App
 from JigsawPuzzle import JigsawPuzzle
 from UserDevelopment import UserDevelopment
-from new_qus import Ui_MainWindow
-from additem import Ui_Form
+from views.additem import Ui_Form
 from backend_qus import Ui_FormQ
 # from ExpressionDetection import VideoWindow, EmotionPredictor, GazeEstimator
 # from EyeGaze import VideoWindowEye, EmotionPredictor, GazeEstimator

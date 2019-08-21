@@ -3,7 +3,7 @@ from pprint import pprint
 from PyQt5 import QtWidgets
 from PyQt5.QtCore import pyqtSlot
 from PyQt5.QtWidgets import QMainWindow, QWidget, QVBoxLayout, QLineEdit, QPushButton
-from lib.create_form_elements import CreateFormElements
+from factory.create_form_elements import CreateFormElements
 
 
 # view

@@ -1,5 +1,5 @@
 from PyQt5.QtCore import QObject, pyqtSlot, pyqtSignal
-from lib.getConfig import load_config
+from factory.getConfig import load_config
 import pathlib
 import shutil
 

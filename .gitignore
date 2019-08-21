@@ -258,3 +258,4 @@ EyeGazeOutput/*
 *.mp4
 *.hdf5
 ExpressionOutput/*
+/assets/*

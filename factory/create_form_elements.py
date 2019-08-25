@@ -41,6 +41,7 @@ class CreateFormElements(QtWidgets.QWidget):
         if fileName:
             self.line_edit.setText(fileName)
             self.filenameChanged.emit(fileName)
+            # TODO: remove viewobject dependency. this is a factory, not a view
             from views.additem import AddNewItem
             AddNewItem.on_filename_changed(AddNewItem, fileName)
 
@@ -52,5 +53,6 @@ class CreateFormElements(QtWidgets.QWidget):
 
     def get_text_val(self, value):
         self.lineValueChanged.emit(value)
+        # TODO: remove viewobject dependency. this is a factory, not a view
         from views.additem import AddNewItem
         AddNewItem.on_objectName_changed(AddNewItem, value)

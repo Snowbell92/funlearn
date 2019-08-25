@@ -1,7 +1,7 @@
 import yaml
 
 
-def load_config(self, config_file):
+def load_yaml_file(self, config_file):
     with open(config_file, 'r') as stream:
         try:
             return yaml.safe_load(stream)

@@ -1,8 +1,8 @@
 from pprint import pprint
 
-from PyQt5 import QtWidgets
+from PyQt5 import QtWidgets, QtCore
 from PyQt5.QtCore import pyqtSlot
-from PyQt5.QtWidgets import QMainWindow, QWidget, QVBoxLayout, QLineEdit, QPushButton
+from PyQt5.QtWidgets import QMainWindow, QWidget, QVBoxLayout, QLineEdit, QPushButton, QMessageBox
 from factory.create_form_elements import CreateFormElements
 
 
@@ -21,12 +21,13 @@ class AddNewItem(QMainWindow):
     def myWindow(self):
         self.setWindowTitle("Add New Item")
         sizeObject = QtWidgets.QDesktopWidget().screenGeometry(-1)
-        print(" Screen size : " + str(sizeObject.height()) + "x" + str(sizeObject.width()))
+        # print(" Screen size : " + str(sizeObject.height()) + "x" + str(sizeObject.width()))
         self.width = 600
         self.height = 480
         self.left = 0
         self.top = 0
         self.setGeometry(self.left, self.top, self.width, self.height)
+        # self.setWindowState(QtCore.Qt.WindowMaximized)
         layout = QVBoxLayout()
         el_name = CreateFormElements("Object Name: ", QLineEdit())
         el_image = CreateFormElements("Add Images", None)
@@ -41,7 +42,7 @@ class AddNewItem(QMainWindow):
         self._model.objName.connect(self.on_objectName_changed)
         el_save_button.clicked.connect(lambda n: self._controller.update_filename(self.imageList))
         el_save_button.clicked.connect(lambda x: self._controller.update_objName(self.objName))
-        el_save_button.clicked.connect(self._controller.onSave)
+        el_save_button.clicked.connect(self.saveItem)
         layout.addWidget(el_name)
         layout.addWidget(el_image)
         layout.addWidget(el_image_1)
@@ -52,6 +53,17 @@ class AddNewItem(QMainWindow):
         widget = QWidget()
         widget.setLayout(layout)
         self.setCentralWidget(widget)
+
+    def saveItem(self):
+        isSaveSuccess = self._controller.onSave()
+        if isSaveSuccess:
+            self.showPopUp("Save Successful", "Item was added successfully!")
+            for widget in QMainWindow.allWidgets():
+                if isinstance(widget, QLineEdit):
+                    print(widget)
+
+    def showPopUp(self, title, message):
+        QMessageBox.about(self, title, message)
 
     @pyqtSlot(list)
     def on_filename_changed(self, value):

@@ -1,7 +1,7 @@
 import os
 
 import yaml
-from PyQt5.QtCore import QObject, pyqtSlot, pyqtSignal
+from PyQt5.QtCore import QObject, pyqtSlot
 from factory.getConfig import load_yaml_file
 import pathlib
 import shutil

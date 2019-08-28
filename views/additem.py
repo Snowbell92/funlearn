@@ -58,6 +58,7 @@ class AddNewItem(QMainWindow):
         isSaveSuccess = self._controller.onSave()
         if isSaveSuccess:
             self.showPopUp("Save Successful", "Item was added successfully!")
+            # TODO: add buttons for either clearing the widgets or go back to prev screen
             for widget in QMainWindow.allWidgets():
                 if isinstance(widget, QLineEdit):
                     print(widget)

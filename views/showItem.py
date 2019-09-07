@@ -1,5 +1,6 @@
 import sys
 
+from PyQt5 import QtCore
 from PyQt5.QtGui import QPixmap
 from PyQt5.QtWidgets import QVBoxLayout, QWidget, QMainWindow, QPushButton, QLabel
 
@@ -12,7 +13,7 @@ class ShowItem(QMainWindow):
         self.showWindow()
 
     def showWindow(self):
-        self.setWindowTitle("You are learning")
+        self.setWindowTitle("Welcome to Audio Visual Learning")
         self.width = 600
         self.height = 480
         self.left = 0
@@ -22,9 +23,10 @@ class ShowItem(QMainWindow):
         el_next_item.setText('Next Item')
         # image slideshow. it will not play on it it's own
         imageFiles = self._controller.getItem(self.counter)
-        el_pic_label= QLabel(self)
+        el_pic_label = QLabel(self)
         el_pixmap = QPixmap(imageFiles[0])
-        el_pic_label.setPixmap(el_pixmap)
+        el_pic_label.setPixmap(el_pixmap.scaled(480, 320, QtCore.Qt.KeepAspectRatio, QtCore.Qt.FastTransformation))
+        el_pic_label.setAlignment(QtCore.Qt.AlignHCenter)
         el_next_item.clicked.connect(self.increaseCounter)
         layout = QVBoxLayout()
         widget = QWidget()

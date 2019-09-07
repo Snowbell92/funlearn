@@ -17,7 +17,7 @@ class ShowItemController(QObject):
             i = 0
         currentItem = self.objectList['objects'][i]
         path = pathlib.Path(self.assetDir + currentItem)
-        files = [e for e in path.iterdir() if e.is_file()]
+        files = [str(e) for e in path.iterdir() if e.is_file()]
         return files
 
 

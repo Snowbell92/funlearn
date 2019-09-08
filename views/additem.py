@@ -27,7 +27,7 @@ class AddNewItem(QMainWindow):
         self.left = 0
         self.top = 0
         self.setGeometry(self.left, self.top, self.width, self.height)
-        # self.setWindowState(QtCore.Qt.WindowMaximized)
+        #self.setWindowState(QtCore.Qt.WindowMaximized)
         layout = QVBoxLayout()
         el_name = CreateFormElements("Object Name: ", QLineEdit())
         el_image = CreateFormElements("Add Images", None)
